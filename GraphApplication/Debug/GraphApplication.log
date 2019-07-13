@@ -1,0 +1,8 @@
+﻿  Graph.cpp
+C:\Users\aleco\source\repos\GraphApplication\GraphApplication\Graph.cpp(13,20): warning C4018:  '<': errata corrispondenza tra signed e unsigned
+  GraphApplication.cpp
+  Generazione del codice in corso...
+C:\Users\aleco\source\repos\GraphApplication\GraphApplication\Graph.cpp(22,20): warning C4018:  '<': errata corrispondenza tra signed e unsigned
+C:\Users\aleco\source\repos\GraphApplication\GraphApplication\Graph.cpp(22,20): warning C4018: C:\Users\aleco\source\repos\GraphApplication\GraphApplication\Graph.cpp(33) : error C4716: 'Graph::addNewVertex': deve restituire un valore
+C:\Users\aleco\source\repos\GraphApplication\GraphApplication\Graph.cpp(22,20): warning C4018: C:\Users\aleco\source\repos\GraphApplication\GraphApplication\Vertex.h(16) : error C4716: 'Vertex::setId': deve restituire un valore
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(429,5): error MSB6006: "CL.exe" terminato con il codice 2.

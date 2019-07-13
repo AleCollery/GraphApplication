@@ -1,9 +1,11 @@
 # GraphApplication
 
 Some graph samples and some graph algorithms.
-User surf in the graph.
+
+User can manually surf in the graph.
+
 Implemented algorithms:
-	- Dijkstra
+- Dijkstra
 
 Todo:
 - add some errors handling 

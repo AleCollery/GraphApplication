@@ -125,6 +125,7 @@ void Graph::printCurrentEdges()
 void Graph::printMoveToMenu()
 {
 	int index;
+	std::cout << "Graph\n" << "number of edges: " << edges.size() << " number of vertices: " << vertices.size() << std::endl;
 	std::cout << "Current Vertex: " << current()->getId() << std::endl;
 	printCurrentEdges();
 	std::cout << "Select edge to move to: ";

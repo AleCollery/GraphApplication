@@ -363,6 +363,8 @@ MigrationBackup/
 
 # Compiled Dynamic libraries
 *.so
+*.suo
+*.db
 *.dylib
 *.dll
 

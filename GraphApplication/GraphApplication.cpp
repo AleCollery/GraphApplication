@@ -9,7 +9,7 @@ int main()
 	Graph* g = new Graph();
 	loadSampleGraph(g);
 
-	
+	std::cout << "test";
 	while (true) {
 		system("cls");
 		g->printMoveToMenu();

@@ -1,10 +1,6 @@
 #include "Vertex.h"
 #include <iostream>
 
-Vertex::Vertex() 
-{
-}
-
 void Vertex::addEdge(Edge* _edge)
 {
 	edges.push_back(_edge);
@@ -22,6 +18,7 @@ std::vector<Edge*> Vertex::getEdgesFrom()
 	}
 	return edgesFromThis;
 }
+
 
 
 std::vector<Edge*> Vertex::getEdgesTo()
@@ -60,4 +57,17 @@ void Vertex::printPathToOrigin()
 		v = v->previousVertex;
 	}
 	std::cout << "<-" << v->getId() << std::endl;
+}
+
+std::vector<Edge*> Vertex::getBaseEdgesFrom() 
+{
+	std::vector<Edge*> edgesFromThis;
+	for (int i = 0; i < edges.size(); i++)
+	{
+		if (edges[i]->getOrigin() == this && !edges[i]->isVirtualEdge())
+		{
+			edgesFromThis.push_back(edges[i]);
+		}
+	}
+	return edgesFromThis;
 }

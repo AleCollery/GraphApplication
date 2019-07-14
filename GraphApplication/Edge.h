@@ -15,9 +15,15 @@ public:
 	Vertex* getDestination() const { return destination; };
 	bool isValid();
 
+	//Dijkstra
+	bool isVirtualEdge() const { return virtualEdge; }
+	void setAsVirtualEdge() { virtualEdge = true; }
 protected:
 	int weight;
 	Vertex* origin;
 	Vertex* destination;
+
+	//Dijkstra
+	bool virtualEdge = false;
 };
 

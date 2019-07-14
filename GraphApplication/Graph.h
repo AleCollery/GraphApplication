@@ -36,10 +36,9 @@ public:
 	void printMoveToMenu();
 	
 	//Dijkstra
-	void initializeDijstra();
 	void Dijkstra();
 	int dFindLowerVertex(std::vector<Vertex*> q);
-
+	int getWeightOfEdge(Edge* e);
 	
 protected:
 	Vertex* pointer;

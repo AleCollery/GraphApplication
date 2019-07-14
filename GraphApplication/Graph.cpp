@@ -86,6 +86,7 @@ void Graph::addEdge(Vertex* _origin, Vertex* _destination, int _weight)
 	_destination->addEdge(e);
 	if (!oriented) {
 		Edge* secondEdge = new Edge(_destination, _origin, _weight);
+		secondEdge->setAsVirtualEdge();
 		_origin->addEdge(secondEdge);
 		_destination->addEdge(secondEdge);
 		addEdge(secondEdge);
@@ -134,11 +135,6 @@ void Graph::printMoveToMenu()
 
 // Dijkstra
 
-void Graph::initializeDijstra() 
-{
-
-}
-
 int Graph::dFindLowerVertex(std::vector<Vertex*> q)
 {
 	int min = q[0]->getTotalWeight();
@@ -160,7 +156,7 @@ void Graph::Dijkstra()
 	Vertex* u;
 	int index;
 	int alt;
-
+	int edgeWeight;
 	while (Q.size() > 0)
 	{
 		index = dFindLowerVertex(Q);
@@ -171,10 +167,16 @@ void Graph::Dijkstra()
 			break;
 		}
 
-		adj = u->getEdgesFrom();
+		if(isOriented())
+		{
+			adj = u->getBaseEdgesFrom();
+		}
+		else{ adj = u->getEdgesFrom(); }
+		
 		for (int i = 0; i < adj.size(); i++)
 		{
-			alt = u->getTotalWeight() + adj[i]->getWeight();
+			edgeWeight = getWeightOfEdge(adj[i]);
+			alt = u->getTotalWeight() + edgeWeight;
 			if (alt < adj[i]->getDestination()->getTotalWeight())
 			{
 				adj[i]->getDestination()->setTotalWeight(alt);
@@ -182,7 +184,12 @@ void Graph::Dijkstra()
 			}
 		}
 	}
+}
 
+int Graph::getWeightOfEdge(Edge* e)
+{
+	if (!isWeighted()) return 1;
+	return e->getWeight();
 }
 
 

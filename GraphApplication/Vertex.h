@@ -8,7 +8,6 @@ class Edge;
 class Vertex
 {
 public:
-	Vertex();
 	std::vector<Edge*> getEdgesFrom();
 	std::vector<Edge*> getEdgesTo();
 	void addEdge(Edge* _edge);
@@ -23,6 +22,7 @@ public:
 	Vertex* previousVertex = nullptr;
 	std::vector<Vertex*> getDestinationEdges();
 	void printPathToOrigin();
+	std::vector<Edge*> getBaseEdgesFrom();
 
 
 protected:

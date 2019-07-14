@@ -1,13 +1,25 @@
 #include <iostream>
 #include "Graph.h"
 
+void loadSampleGraph(Graph* g);
 
 int main()
 {
 	std::cout << "Creating a new graph\n";
 	Graph* g = new Graph();
-	g->toggleWeight();
-	g->toggleOriented();
+	loadSampleGraph(g);
+
+	
+	/*while (true) {
+		system("cls");
+		g->printMoveToMenu();
+	}*/
+}
+
+void loadSampleGraph(Graph* g)
+{
+	//g->toggleWeight();
+	//g->toggleOriented();
 	Vertex* v0 = g->addNewVertex();
 	Vertex* v1 = g->addNewVertex();
 	Vertex* v2 = g->addNewVertex();
@@ -18,7 +30,7 @@ int main()
 
 	g->addEdge(v0, v1, 2);
 	g->addEdge(v0, v4, 8);
-	
+
 	g->addEdge(v1, v2, 6);
 	g->addEdge(v1, v3, 2);
 
@@ -33,14 +45,6 @@ int main()
 
 
 	v0->setAsOrigin();
-	g->initializeDijstra();
 	g->Dijkstra();
-
-	
-	//v2->printPathToOrigin();
 	v6->printPathToOrigin();
-	/*while (true) {
-		system("cls");
-		g->printMoveToMenu();
-	}*/
 }

@@ -10,10 +10,10 @@ int main()
 	loadSampleGraph(g);
 
 	
-	/*while (true) {
+	while (true) {
 		system("cls");
 		g->printMoveToMenu();
-	}*/
+	}
 }
 
 void loadSampleGraph(Graph* g)

@@ -382,3 +382,6 @@ MigrationBackup/
 *.exe
 *.out
 *.app
+.vs/GraphApplication/v16/ipch/AutoPCH/430a70fafda896f1/GRAPH.ipch
+*.ipch
+*.db

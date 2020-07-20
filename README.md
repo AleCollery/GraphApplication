@@ -13,3 +13,4 @@ Todo:
 - read graphs from file
 - save graphs on file
 - check if the graph is correct for Dijkstra (no negative edges)
+- more testing
